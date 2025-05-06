@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { DictionaryService } from './dictionary.service';
-import { dictionary } from '@prisma/client';
+import { dictionary } from 'src/generated/client';
 
 @Controller('dictionary')
 export class DictionaryController {
