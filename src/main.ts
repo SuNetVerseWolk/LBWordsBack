@@ -5,11 +5,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 	
   app.enableCors({
-    origin: 'https://lb-words-front.vercel.app/books',
+    origin: process.env.FRONT_URL,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
 
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 4000);
 }
 bootstrap();
